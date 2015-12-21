@@ -167,8 +167,7 @@ PRODUCT_PACKAGES += \
     curl \
     libbson \
     libcurl \
-    tcpdump \
-    libcnefeatureconfig
+    tcpdump
 
 # Wifi
 PRODUCT_PACKAGES += \
