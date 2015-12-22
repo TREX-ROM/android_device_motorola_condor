@@ -217,14 +217,6 @@ static struct hw_module_methods_t power_module_methods = {
     .open = NULL,
 };
 
-static int get_feature(__attribute__((unused)) struct power_module *module,
-                       feature_t feature)
-{
-    if (feature == POWER_FEATURE_SUPPORTED_PROFILES) {
-        return PROFILE_MAX;
-    }
-    return -1;
-}
 
 struct power_module HAL_MODULE_INFO_SYM = {
     .common = {
@@ -240,5 +232,4 @@ struct power_module HAL_MODULE_INFO_SYM = {
     .init = power_init,
     .setInteractive = power_set_interactive,
     .powerHint = power_hint,
-    .getFeature = get_feature
 };

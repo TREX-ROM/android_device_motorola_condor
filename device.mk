@@ -187,8 +187,8 @@ PRODUCT_PACKAGES += \
     libqsap_sdk
 
 # Doze
-PRODUCT_PACKAGES += \
-    MotoDoze
+#PRODUCT_PACKAGES += \
+#    MotoDoze
 
 # MultiWindow ;p
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -229,6 +229,42 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qc_nlp_in_use=1 \
     persist.loc.nlp_name=com.qualcomm.services.location \
     ro.gps.agps_provider=1
+
+# Camera_gallery
+PRODUCT_COPY_FILES += \
+    packages/apps/moto/app/motocamera.apk:system/app/camera/camera.apk \
+    packages/apps/moto/app/motogallery.apk:system/app/gallery/gallery.apk \
+    packages/apps/moto/lib/libcamlistener_jni.so:system/lib/libcamlistener_jni.so \
+    packages/apps/moto/lib/libjni_android_eglfence.so:system/lib/libjni_android_eglfence.so \
+    packages/apps/moto/lib/libjni_android_filtershow_filters.so:system/lib/libjni_android_filtershow_filters.so \
+    packages/apps/moto/lib/libjni_android_jpegstream.so:system/lib/libjni_android_jpegstream.so \
+    packages/apps/moto/lib/libjni_mot_makernotes.so:system/lib/libjni_mot_makernotes.so \
+    packages/apps/moto/lib/librs.convolve3x3.so:system/lib/librs.convolve3x3.so \
+    packages/apps/moto/lib/libjni_mot_mosaic.so:system/lib/libjni_mot_mosaic.so \
+    packages/apps/moto/lib/librs.grad.so:system/lib/librs.grad.so \
+    packages/apps/moto/lib/librs.grey.so:system/lib/librs.grey.so \
+    packages/apps/moto/lib/librs.saturation.so:system/lib/librs.saturation.so \
+    packages/apps/moto/lib/librs.vignette.so:system/lib/librs.vignette.so \
+    packages/apps/moto/lib/librsjni.so:system/lib/librsjni.so \
+    packages/apps/moto/lib/libRSSupport.so:system/lib/libRSSupport.so \
+    packages/apps/moto/lib/libvdl-mobile-engine.so:system/lib/libvdl-mobile-engine.so
+
+# Browser
+PRODUCT_COPY_FILES += \
+    packages/apps/Browser.apk:system/app/Browser/Browser.apk
+
+# Launcher
+PRODUCT_COPY_FILES += \
+    packages/apps/trebuchet.apk:system/app/launcher/launcher.apk
+
+# Music
+PRODUCT_COPY_FILES += \
+    packages/apps/Phonograph.apk:system/priv-app/music/Phonograph.apk
+
+# file_manager
+PRODUCT_COPY_FILES += \
+    packages/apps/filemanager.apk:system/priv-app/explorer/filemanager.apk
+
 
 # Prima(pronto firmware)
 PRODUCT_COPY_FILES += \
