@@ -181,3 +181,21 @@ qemu.hw.mainkeys=0
 
 # Wifi
 ro.disableWifiApFirmwareReload=true
+
+# Use reference RIL for initial bringup
+#rild.libpath=/system/lib/libreference-ril.so
+rild.libpath=/vendor/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+persist.radio.nitz_plmn=
+persist.radio.nitz_lons_0=
+persist.radio.nitz_lons_1=
+persist.radio.nitz_lons_2=
+persist.radio.nitz_lons_3=
+persist.radio.nitz_sons_0=
+persist.radio.nitz_sons_1=
+persist.radio.nitz_sons_2=
+persist.radio.nitz_sons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+persist.radio.msgtunnel.start=false
+persist.radio.atfwd.start=false
